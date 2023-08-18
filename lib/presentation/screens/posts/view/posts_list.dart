@@ -1,3 +1,4 @@
+import 'package:bloc_mvvm_demo/infrastructure/bloc/post_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -28,8 +29,8 @@ class _PostsListState extends State<PostsList> {
               return const Center(child: Text('no posts'));
             }
             return ListView.builder(
-              itemCount: state.posts.length,
-                itemBuilder: (BuildContext context, int index){
+                itemCount: state.posts.length,
+                itemBuilder: (BuildContext context, int index) {
                   return PostListItem(post: state.posts[index]);
                 });
         }

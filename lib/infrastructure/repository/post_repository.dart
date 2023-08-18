@@ -1,9 +1,8 @@
-import 'package:bloc_mvvm_demo/constants/endpoints.dart';
-import 'package:bloc_mvvm_demo/utils/api_client.dart';
+import 'package:bloc_mvvm_demo/application/api.dart';
+import 'package:bloc_mvvm_demo/domain/models/post_model/post_model.dart';
+import 'package:bloc_mvvm_demo/domain/service/api_client.dart';
 
-import '../posts.dart';
-
-class PostRepository{
+class PostRepository {
   final ApiClient apiClient = ApiClient();
 
   Future<List<Post>> fetchPostList() async {
