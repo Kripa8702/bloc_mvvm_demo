@@ -8,7 +8,7 @@ class PostRepository{
 
   Future<List<Post>> fetchPostList() async {
     final res = await apiClient.getRequest(Endpoints.postUrl);
-    final postList = res.map((e) => Post.fromJson(e)).toList();
+    final postList = (res as List).map((e) => Post.fromJson(e)).toList();
     return postList;
   }
 }
